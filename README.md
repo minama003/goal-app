@@ -12,7 +12,7 @@
 * has_many :goals
 * has_many :comments
 * has_many :lists
-* has_many :memo
+* has_many :memos
 
 ## goals テーブル
 
