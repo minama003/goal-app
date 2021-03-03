@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoalApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goals</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <a href="https://fontmeme.com/jfont/vogue-font/"><img src="https://fontmeme.com/permalink/210302/6c2ecc10c2e43881815ab111070198bc.png" alt="vogue-font" border="0"></a>
+          </div>
+          <%# ログインしているときは以下を表示するようにしましょう %>
+            <%# <div class="nav__right"> %>
+              <%# <%= link_to "ログアウト", root_path, class: :nav__logout %>
+              <%# <%= link_to "New Proto", root_path, class: :nav__btn %>
+            <%# </div> %>
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+            <div class="nav__right">
+              <%= link_to image_tag("https://fontmeme.com/permalink/210302/d11483c3821b467e8981eae49560a880.png", class: :nav__btn), "#" %>
+              <%= link_to image_tag("https://fontmeme.com/permalink/210302/d2a21f0d0691cc097c8ff370cfd5f433.png", class: :nav__btn), "#" %>
+            </div>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright © GOALS rights reserved.</p>
+    </footer>
   </body>
 </html>
