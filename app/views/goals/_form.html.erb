@@ -1,0 +1,9 @@
+<%= form_with model: goal,local: true do |f|%>
+  <div class="field">
+    <%= f.text_field :text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "I do!!", class: :form__btn  %>
+  </div>
+<% end %>

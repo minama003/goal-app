@@ -20,7 +20,7 @@
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to image_tag("https://fontmeme.com/permalink/210303/341d77f8ba6d72064aebdfd6f5fa778b.png",  class: :nav__logout), destroy_user_session_path,method: :delete %>
-              <%= link_to image_tag("https://fontmeme.com/permalink/210303/61a83ab840787256e6e354ed75c1144f.png", class: :nav__btn), root_path %>
+              <%= link_to image_tag("https://fontmeme.com/permalink/210303/61a83ab840787256e6e354ed75c1144f.png", class: :nav__btn), new_goal_path %>
             </div>
           <% else %>
             <div class="nav__right">
