@@ -17,6 +17,7 @@
           <div class="nav__left">
             <%= link_to image_tag("https://fontmeme.com/permalink/210302/6c2ecc10c2e43881815ab111070198bc.png"), root_path %>
           </div>
+            <div id="clock_date"></div>
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to image_tag("https://fontmeme.com/permalink/210303/341d77f8ba6d72064aebdfd6f5fa778b.png",  class: :nav__logout), destroy_user_session_path,method: :delete %>

@@ -2,7 +2,7 @@ class GoalsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @user = User.all
+    @goals = Gser.all
   end
 
   def new
