@@ -1,24 +1,23 @@
 function clock()
 {
-  var twoDigit =function(num){
-    　     var digit
+  const twoDigit =function(num){
+    　     const digit
          if( num < 10 )
           { digit = "0" + num; }
          else { digit = num; }
          return digit;
    }
-  var weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat");
+  const weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat");
 
-  var now = new Date();
+  const now = new Date();
 
-    var year = now.getFullYear();
-    var month = twoDigit(now.getMonth() + 1)
-    var day = twoDigit(now.getDate());
-    var week = weeks[now.getDay()];
-    var hour = twoDigit(now.getHours());
-    var minute = twoDigit(now.getMinutes());
-    var second = twoDigit(now.getSeconds());
-    //var milliseconds = twoDigit(now.getMilliseconds());
+  const year = now.getFullYear();
+  const month = twoDigit(now.getMonth() + 1)
+  const day = twoDigit(now.getDate());
+  const week = weeks[now.getDay()];
+  const hour = twoDigit(now.getHours());
+  const minute = twoDigit(now.getMinutes());
+  const second = twoDigit(now.getSeconds());
 
 document.getElementById("clock_date").textContent =  year + "." + month + "." + day + " (" + week + ")" + hour + ":" + minute + ":" + second ;
 }
