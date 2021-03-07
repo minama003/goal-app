@@ -1,10 +1,6 @@
 class GoalsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
-  def index
-    @goals = Gser.all
-  end
-
   def new
     @goal = Goal.new
   end
@@ -16,7 +12,12 @@ class GoalsController < ApplicationController
     else
       render :new
     end
-  end  
+  end
+
+  def show
+    @goals = Goal.includes(:user)
+    @goal = Goal.find_by(params[:id])
+  end
 
   private
   def move_to_index

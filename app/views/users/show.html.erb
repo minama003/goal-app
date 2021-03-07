@@ -2,14 +2,12 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの情報"%>
+        <%= "#{@user.nickname}さんの詳細ページ"%>
       </h2>
-      
-      <h2 class="page-heading">
-
-      </h2>
-      <div class="user__card">
-        <%#<%= render partial: '#', collection: @user.prototypes %>
+      <div class="goals">
+        <% @goals.each do |goal| %>
+          <p><%= goal.text %></p>
+        <% end %>
       </div>
     </div>
   </div>
