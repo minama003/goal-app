@@ -11,19 +11,22 @@
         <% end %>
       </h2>
       <div class="neon">
-        <p><a href="https://en.wikipedia.org/wiki/Red">
+        <p><a href="#">
           My Goals
         </a></p>
       </div>
-      <ul >
+      <%= link_to 'add',new_goal_path, class: 'goal-new' %>
+      <ul>
         <div class="goals">
           <% @goals.each do |goal| %>
-            <li><h1><%= goal.text %></h1></li>
+            <li>
+            <h1><%= goal.text %></h1>
+            <% if user_signed_in? %>
+            <%= link_to 'delete', goal_path(goal.id), method: :delete, class:'goal-destroy' %>
+            <% end %>
+            </li>
           <% end %>
         </div>
-      <%# if current_user == @goals %>
-      <%#= link_to '商品の編集', edit_item_path, method: :get, class: "item-red-btn" %>
-    <%# end %>
     </div>
   </div>
 </div>

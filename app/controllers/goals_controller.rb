@@ -2,9 +2,9 @@ class GoalsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @goals = Goal.includes(:user)
+    @goals = Goal.all.order('created_at DESC')
   end
-  
+
   def new
     @goal = Goal.new
   end
@@ -18,15 +18,10 @@ class GoalsController < ApplicationController
     end
   end
 
-  def show
-    @goals = Goal.includes(:user)
-    @goal = Goal.find_by(params[:id])
-  end
-
-
   def destroy
-    @goal = Goal.find_by(params[:id])
-    @goal.destroy
+    goal = Goal.find(params[:id])
+    goal.destroy
+    redirect_to root_path
   end
 
   private
