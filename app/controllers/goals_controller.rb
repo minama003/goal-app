@@ -1,6 +1,10 @@
 class GoalsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
+  def index
+    @goals = Goal.includes(:user)
+  end
+  
   def new
     @goal = Goal.new
   end
