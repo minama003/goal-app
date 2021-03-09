@@ -19,6 +19,12 @@ class GoalsController < ApplicationController
     @goal = Goal.find_by(params[:id])
   end
 
+
+  def destroy
+    @goal = Goal.find_by(params[:id])
+    @goal.destroy
+  end
+
   private
   def move_to_index
     unless user_signed_in?

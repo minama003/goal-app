@@ -1,7 +1,7 @@
 function clock()
 {
   const twoDigit =function(num){
-    　     const digit
+    　     var digit
          if( num < 10 )
           { digit = "0" + num; }
          else { digit = num; }

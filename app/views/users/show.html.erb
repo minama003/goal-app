@@ -2,13 +2,24 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
+      <div class="wrapper">
         <%= "#{@user.nickname}さんの詳細ページ"%>
       </h2>
-      <div class="goals">
-        <% @goals.each do |goal| %>
-          <p><%= goal.text %></p>
-        <% end %>
+      <div class="neon">
+        <p><a href="https://en.wikipedia.org/wiki/Red">
+          My Goals
+        </a></p>
       </div>
+      <ul >
+        <div class="goals">
+          <% @goals.each do |goal| %>
+            <li><h1><%= goal.text %></h1></li>
+            <li><%= link_to '削除', goal_path, method: :delete, class:'item-destroy' %></li>
+          <% end %>
+        </div>
+      <%# if current_user == @goals %>
+      <%#= link_to '商品の編集', edit_item_path, method: :get, class: "item-red-btn" %>
+    <%# end %>
     </div>
   </div>
 </div>
