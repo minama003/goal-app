@@ -1,0 +1,11 @@
+<div class="lists">
+  <div class="task">
+    task
+  </div>
+  <div class="limit">
+    limit
+  </div>
+  <% @lists.each do |list|%>
+    <p><%= list.task %><%=list.limit %></p>
+  <% end %>
+</div>
