@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'goals#index'
   resources :users, only: [:show]
   resources :goals, only: [:index,:new,:create,:destroy]
+  resources :lists, only: [:index,:new,:create,:destroy]
 end
