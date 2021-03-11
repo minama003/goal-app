@@ -1,0 +1,10 @@
+.list-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.limit-label{
+  text-align: center;
+}

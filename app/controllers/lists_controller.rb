@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.oder('limit').all
+    @lists = List.order('created_at DESC')
   end
 
   def new
@@ -10,10 +10,16 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to :index
+      redirect_to root_path
     else
       render :new
     end
+  end
+
+  def destroy
+    list = List.find(params[:id])
+    list.destroy
+    redirect_to :index
   end
 
   private
