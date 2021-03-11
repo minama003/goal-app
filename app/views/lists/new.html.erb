@@ -1,0 +1,18 @@
+<%= form_with model: @list, local: true do |f| %>
+<div class="list-form">
+  <div class="field">
+    <h2 class="limit-label">ToDo</h2>
+    <%= f.text_field :task %>
+  </div>
+
+  <div class="field">
+    <h2 class="limit-label">Limited Date</h2>
+    <%= f.date_field :limit %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "CREATE", class: :form__btn  %>
+  </div>
+</div>
+<% end %>
+

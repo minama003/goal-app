@@ -15,7 +15,6 @@
           My Goals
         </a></p>
       </div>
-      <%= link_to 'add',new_goal_path, class: 'goal-new' %>
       <ul>
         <div class="goals">
           <% @goals.each do |goal| %>
@@ -27,6 +26,8 @@
             </li>
           <% end %>
         </div>
+      </ul>
+      <%= link_to 'add',new_goal_path, class: :form__btn %>
     </div>
   </div>
 </div>

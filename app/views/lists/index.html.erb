@@ -5,7 +5,15 @@
   <div class="limit">
     limit
   </div>
-  <% @lists.each do |list|%>
-    <p><%= list.task %><%=list.limit %></p>
-  <% end %>
+  <div class="task-list">
+    <% @lists.each do |list|%>
+      <li>
+        <input type="checkbox" id="02-A" name="checkbox02" checked="checked">
+        <label for="02-A" class="checkbox02">
+          <%= list.task %>  <%=list.limit %>
+        </label>
+      </li>
+    <% end %>
+    <%= link_to 'add',new_list_path, class: :form__btn %>
+  </div>
 </div>
