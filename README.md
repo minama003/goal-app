@@ -43,6 +43,8 @@ pass:a111111
 
 ## データベース設計
 
+<img width="760" alt="スクリーンショット 2021-03-12 10 38 43" src="https://user-images.githubusercontent.com/73687141/110878887-5b110900-831f-11eb-82a8-3f8242d88bb4.png">
+
 ## 動作方法
 
 Rails 6.0.3.5
