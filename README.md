@@ -36,6 +36,8 @@ pass:a111111
 
 ## 機能
 
+![goal-app-30325](https://user-images.githubusercontent.com/73687141/110881646-0d4acf80-8324-11eb-97f9-510f85ebb155.gif)
+
 ## 実装予定の機能
 
 ・日付を逆算しあと何日で今年が終わるかをカウントする機能
