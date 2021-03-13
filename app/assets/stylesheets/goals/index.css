@@ -535,3 +535,7 @@ color:#ffffff;
   right: 30px;
   bottom: 0px;
 }
+
+.li{
+  list-style-type: disc;
+}
