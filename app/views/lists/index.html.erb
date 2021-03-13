@@ -1,24 +1,21 @@
 <div class="lists">
-  <div class="task">
-    task
-  </div>
-  <div class="limit">
-    limit
-  </div>
   <div class="main-box" >
     <div class="task-list">
       <% @lists.each do |list|%>
         <li>
           <input type="checkbox" id="02-A" name="checkbox02" checked="checked">
           <label for="02-A" class="checkbox02">
-            <%= list.task %>  <%=list.limit %>
+            <h2><%= list.task %>  <%=list.limit %></h2>
           </label>
+          <% if user_signed_in? %>
+            <%= link_to 'delete', list_path(list.id), method: :delete, class:'goal-destroy' %>
+          <% end %>
         </li>
       <% end %>
     </div>
     <div class="form__wrapper2" >
-      <div class="actions2">
-        <%= link_to 'add',new_list_path, class: :form__btn2 %>
+      <div class="actions1">
+        <%= link_to 'add',new_list_path, class: :form__btn1 %>
       </div>
     </div>
   </div>

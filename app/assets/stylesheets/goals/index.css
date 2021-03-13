@@ -1,6 +1,6 @@
 p{
   text-align:center;
-  font-size:7em;
+  font-size:5em;
   margin:5px 0 5px 0; 
 }
 
@@ -11,8 +11,10 @@ a{
   transition: all 0.5s;
 }
 
+
+
 p:nth-child(1) a{
-  color:#FF1177;
+  color:#e9a7c8;
   font-family:Pacifico;
 }
 p:nth-child(1) a:hover{
@@ -22,8 +24,8 @@ p:nth-child(1) a:hover{
 }
 
 p:nth-child(2) a{
-  font-size:1.5em;
-  color:#228DFF;
+  font-size:0.8em;
+  color:#56c8f2;
   font-family:Pacifico;
 }
 p:nth-child(2) a:hover{
@@ -530,6 +532,6 @@ color:#ffffff;
 
 .actions2{
   position: absolute;
-  right: 0px;
-  bottom: 10px;
+  right: 30px;
+  bottom: 0px;
 }

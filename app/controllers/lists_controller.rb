@@ -10,7 +10,7 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to root_path
+      redirect_to action: 'index'
     else
       render :new
     end
@@ -19,7 +19,7 @@ class ListsController < ApplicationController
   def destroy
     list = List.find(params[:id])
     list.destroy
-    redirect_to :index
+    redirect_to action: 'index'
   end
 
   private

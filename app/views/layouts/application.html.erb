@@ -19,16 +19,19 @@
           </div>
             <div id="clock_date"></div>
           <% if user_signed_in? %>
-            <div class="nav__right">
-              <%= link_to image_tag("https://fontmeme.com/permalink/210303/341d77f8ba6d72064aebdfd6f5fa778b.png",  class: :nav__logout), destroy_user_session_path,method: :delete %>
-              <%= link_to image_tag("https://fontmeme.com/permalink/210303/61a83ab840787256e6e354ed75c1144f.png", class: :nav__btn), new_goal_path %>
-            </div>
+          <div class="nav__right">
+            <%= link_to image_tag("https://fontmeme.com/permalink/210303/341d77f8ba6d72064aebdfd6f5fa778b.png",  class: :nav__btn), destroy_user_session_path,method: :delete %>
+          </div>
           <% else %>
             <div class="nav__right">
               <%= link_to image_tag("https://fontmeme.com/permalink/210302/d11483c3821b467e8981eae49560a880.png",class: :nav__btn), new_user_session_path %>
               <%= link_to image_tag("https://fontmeme.com/permalink/210302/d2a21f0d0691cc097c8ff370cfd5f433.png", class: :nav__btn), new_user_registration_path %>
             </div>
           <% end %>
+            <div class="neon">
+              <p><a><% link_to 'ToDo',lists_path %></a></p>
+              <p><a><%= link_to 'ToDo',lists_path %></a></p>
+            </div>
         </div>
       </div>
     </header>
