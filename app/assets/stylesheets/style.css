@@ -84,6 +84,7 @@ a {
 }
 
 /* フォーム周り */
+
 .form__wrapper{
   min-height: calc(100vh - 161px);
 }
@@ -96,6 +97,8 @@ a {
 .actions{
   margin-bottom: 40px;
 }
+
+
 
 .form__btn{
   display: inline-block;

@@ -15,19 +15,22 @@
           My Goals
         </a></p>
       </div>
-      <ul>
-        <div class="goals">
+      <div class="goals">
+        <ul>
           <% @goals.each do |goal| %>
             <li>
-            <h1><%= goal.text %></h1>
+              <h1><%= goal.text %></h1>
             <% if user_signed_in? %>
-            <%= link_to 'delete', goal_path(goal.id), method: :delete, class:'goal-destroy' %>
+              <%= link_to 'delete', goal_path(goal.id), method: :delete, class:'goal-destroy' %>
             <% end %>
             </li>
           <% end %>
+        </ul>
+        <div class="actions2">
+          <%= link_to 'add',new_goal_path, class: :form__btn2 %>
         </div>
-      </ul>
-      <%= link_to 'add',new_goal_path, class: :form__btn %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

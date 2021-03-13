@@ -5,15 +5,21 @@
   <div class="limit">
     limit
   </div>
-  <div class="task-list">
-    <% @lists.each do |list|%>
-      <li>
-        <input type="checkbox" id="02-A" name="checkbox02" checked="checked">
-        <label for="02-A" class="checkbox02">
-          <%= list.task %>  <%=list.limit %>
-        </label>
-      </li>
-    <% end %>
-    <%= link_to 'add',new_list_path, class: :form__btn %>
+  <div class="main-box" >
+    <div class="task-list">
+      <% @lists.each do |list|%>
+        <li>
+          <input type="checkbox" id="02-A" name="checkbox02" checked="checked">
+          <label for="02-A" class="checkbox02">
+            <%= list.task %>  <%=list.limit %>
+          </label>
+        </li>
+      <% end %>
+    </div>
+    <div class="form__wrapper2" >
+      <div class="actions2">
+        <%= link_to 'add',new_list_path, class: :form__btn2 %>
+      </div>
+    </div>
   </div>
 </div>
